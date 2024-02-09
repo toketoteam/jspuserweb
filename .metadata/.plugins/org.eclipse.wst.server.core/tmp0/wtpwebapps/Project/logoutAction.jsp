@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="javax.servlet.http.HttpSession" %> <!-- HttpSession 클래스 import -->
+<%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
+
+<% request.setCharacterEncoding("UTF-8"); %>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jsp회원제 게시판 웹</title>
+</head>
+<body>
+<%
+    // 세션을 가져옴
+    HttpSession existingSession = request.getSession(false);
+    if (existingSession != null) {
+        // 세션이 존재하면 세션을 무효화
+        existingSession.invalidate();
+    }
+    // 메인 리다이렉트
+    response.sendRedirect("index.jsp");
+%>
+
+
+
+</body>
+</html>

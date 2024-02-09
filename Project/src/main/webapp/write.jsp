@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="css/bootstrap.css">
 
-<title>jsp 게시판 웹사이트</title>
+<title>jsp 회원제 게시판 웹</title>
 
 </head>
 
@@ -64,7 +64,7 @@
 
 			</button>
 
-			<a class="navbar-brand" href="main.jsp">JSP 게시판</a>
+			<a class="navbar-brand" href="index.jsp">메인으로</a>
 
 		</div>
 
@@ -74,7 +74,7 @@
 
 			<ul class="nav navbar-nav">
 
-				<li><a href="main.jsp">메인</a></li>
+				<li><a href="bbs.jsp">게시판 홈</a></li>
 
 				<li class="active"><a href="bbs.jsp">게시판</a></li>
 

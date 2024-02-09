@@ -24,7 +24,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>jsp 게시판 웹사이트</title>
+<title>jsp 회원제 게시판 웹</title>
 
 </head>
 

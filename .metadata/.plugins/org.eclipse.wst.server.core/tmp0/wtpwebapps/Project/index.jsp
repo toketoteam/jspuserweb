@@ -22,6 +22,7 @@
     <!-- Custom styles for this template-->
     <link href="<%=request.getContextPath() %>/resource/startbootstrap/css/sb-admin-2.min.css" rel="stylesheet">
 
+    
 </head>
 
 <body id="page-top">
@@ -148,8 +149,8 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <p class="text-center mb-2"><strong>페이지 코드 확인</strong> </p>
+                <a class="btn btn-success btn-sm" href="https://github.com/toketoteam/jspuserweb">github저장소</a>
             </div>
 
         </ul>
@@ -333,7 +334,16 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                <% 
+                					String userID = (String) session.getAttribute("userID");
+                						if (userID != null) {
+                    											out.print(userID);
+                											} else {
+                    											out.print("로그인 하세요!");
+                													}
+            					%>
+                                </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -353,10 +363,20 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
+                                <%String loggedInUserID = (String) session.getAttribute("userID");
+   									if (loggedInUserID != null) {
+								%>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
+                                <% } else { %>
+    							<a class="dropdown-item" href="login.jsp">
+        						<i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+        						Login
+    							</a>
+    							<% } %>
+                                
                             </div>
                         </li>
 
@@ -734,7 +754,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.jsp">Logout</a>
+                    <a class="btn btn-primary" href="logoutAction.jsp">Logout</a>
                 </div>
             </div>
         </div>
