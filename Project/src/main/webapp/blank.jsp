@@ -112,9 +112,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.jsp">Login</a>
-                        <a class="collapse-item" href="register.jsp">Register</a>
-                        <a class="collapse-item" href="forgot-password.jsp">Forgot Password</a>
+                        <a class="collapse-item" href="login.jsp">로그인</a>
+                        <a class="collapse-item" href="register.jsp">회원가입</a>
+                        <a class="collapse-item" href="bbs.jsp">게시판</a>
+                        <a class="collapse-item" href="forgot-password.jsp">비밀번호 찾기</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.jsp">404 Page</a>
@@ -326,7 +327,16 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                <% 
+                					String userID = (String) session.getAttribute("userID");
+                						if (userID != null) {
+                    											out.print(userID);
+                											} else {
+                    											out.print("로그인 하세요!");
+                													}
+            					%>
+                               </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -397,15 +407,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">로그아웃 할까요?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body"> "Logout" 버튼을 누르면 로그아웃합니다.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.jsp">Logout</a>
+                    <a class="btn btn-primary" href="logoutAction.jsp">Logout</a>
                 </div>
             </div>
         </div>
