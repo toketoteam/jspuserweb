@@ -1,0 +1,16 @@
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/index.jsp HTTP/1.1" 200 43893
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_profile_1.svg HTTP/1.1" 200 2163
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_profile.svg HTTP/1.1" 200 2820
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_rocket.svg HTTP/1.1" 200 3147
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/resource/startbootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59344
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_profile_3.svg HTTP/1.1" 200 2733
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_posting_photo.svg HTTP/1.1" 200 8192
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/img/undraw_profile_2.svg HTTP/1.1" 200 2630
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /Project/resource/startbootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+127.0.0.1 - - [10/Feb/2024:02:19:51 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+127.0.0.1 - - [10/Feb/2024:02:19:54 +0900] "GET /Project/login.jsp HTTP/1.1" 200 2642
+127.0.0.1 - - [10/Feb/2024:02:19:54 +0900] "GET /Project/css/bootstrap.min.css HTTP/1.1" 200 117150
+127.0.0.1 - - [10/Feb/2024:02:19:57 +0900] "POST /Project/loginAction.jsp HTTP/1.1" 200 542
+127.0.0.1 - - [10/Feb/2024:02:19:58 +0900] "GET /Project/index.jsp HTTP/1.1" 200 44030
+127.0.0.1 - - [10/Feb/2024:02:19:58 +0900] "GET /favicon.ico HTTP/1.1" 404 818
